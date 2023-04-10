@@ -19,12 +19,9 @@
 
 using namespace std::chrono_literals;
 
-/// \brief manipulates numbers, like formating, and creation of a, hopefully,
-/// unique identifier
-
 namespace tenacitas::lib::number::typ {
 
-/// \brief Generates a unique (sort of) identifier
+/// \brief creation of a unique identifier
 struct id {
   /// \brief Identifier based on a number
   template <typename t_number> inline id(t_number p_value) : m_value(p_value) {}
