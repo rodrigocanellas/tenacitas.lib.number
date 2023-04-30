@@ -17,9 +17,16 @@
 #include <string>
 #include <thread>
 
+#include <tenacitas.lib.number/cpt/id.h>
+
 using namespace std::chrono_literals;
 
 namespace tenacitas::lib::number::typ {
+
+template <cpt::id t_id> t_id create() {
+  return static_cast<t_id>(
+      std::chrono::high_resolution_clock::now().time_since_epoch().count());
+}
 
 /// \brief creation of a unique identifier
 struct id {
